@@ -4,12 +4,12 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <header className='text-4xl'>
-      <nav className='flex justify-between border-cyan-100'>
+    <header>
+      <nav className='flex justify-between items-center border-cyan-100'>
         <div>
-          <span className='gemini-text'>Taurus AI</span>
+          <span className='gemini-text text-4xl'>Taurus AI</span>
         </div>
-        <div>
+        <div className=''>
           <SignedOut>
             <SignInButton />
           </SignedOut>
