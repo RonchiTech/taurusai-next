@@ -1,5 +1,7 @@
 'use client';
 
+import Content from '@/components/Content';
+import Sidebar from '@/components/Sidebar';
 import { useAuth } from '@clerk/nextjs';
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
@@ -14,7 +16,10 @@ function Dashboard() {
     }
   }, [isLoaded, isSignedIn]);
 
-  return <div>Dashboard</div>;
+  return <div className='flex h-screen'>
+    <Sidebar />
+    <Content />
+  </div>;
 }
 
 export default Dashboard;
