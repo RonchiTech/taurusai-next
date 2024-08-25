@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.gemini-text {
+  background: linear-gradient(to right, #4285f4, #d96570); /* Adjust colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
