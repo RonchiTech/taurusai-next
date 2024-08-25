@@ -4,10 +4,10 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <header>
+    <header className='text-4xl'>
       <nav className='flex justify-between border-cyan-100'>
         <div>
-          <Link href='/'>Taurus AI</Link>
+          <span className='gemini-text'>Taurus AI</span>
         </div>
         <div>
           <SignedOut>
