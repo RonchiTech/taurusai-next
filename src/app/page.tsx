@@ -1,6 +1,12 @@
-import Link from 'next/link';
-
+import Login from '@/components/Login';
+import { auth } from '@clerk/nextjs/server';
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return <Link href='/dashboard'>Link to dashboard</Link>;
+  const { userId } = auth();
+
+  if (userId) {
+    redirect('/dashboard');
+  }
+  return <Login />;
 }
