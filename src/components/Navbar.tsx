@@ -1,5 +1,6 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 
 function Navbar() {
   return (
@@ -9,11 +10,16 @@ function Navbar() {
           <Link href='/'>Taurus AI</Link>
         </div>
         <div>
-          <Link href='/account'>Account</Link>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </nav>
     </header>
   );
 }
 
-export default Navbar
+export default Navbar;
